@@ -3,9 +3,15 @@ import React from 'react'
 //styles
 import "./styles.css"
 
-const CartCountButton = () => {
+
+//react-icons
+import {MdShoppingCart} from "react-icons/md"
+const CartCountButton = ({cartCount}) => {
   return (
-    <div>CartCountButton</div>
+    <div className='btnCartCount'>
+      <div className="count">{cartCount >= 100 ? "99+" : cartCount}</div>
+      <MdShoppingCart />
+    </div>
   )
 }
 
