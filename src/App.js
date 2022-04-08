@@ -1,9 +1,14 @@
 import React from 'react'
-import './App.scss';
+import './App.css';
+
+//pages
+import Home from './pages/Home/Home';
 
 const App = () => {
   return (
-    <div>App</div>
+    <div>
+      <Home />
+    </div>
   )
 }
 
