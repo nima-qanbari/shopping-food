@@ -3,6 +3,9 @@ import React from "react";
 //styles
 import "./styles.css"
 
+//components
+import ButtonAddRemoveItem from "../../ButtonAddRemoveItem/ButtonAddRemoveItem";
+
 const MenuItem = ({item}) => {
   const { name, info, price, img } = item;
   return (
@@ -16,7 +19,7 @@ const MenuItem = ({item}) => {
       </div>
       <div className="item-footer-desc">
         <span className="footer-desc-price">$ {price}</span>
-        <button>Add +</button>
+        <ButtonAddRemoveItem quantity={2}/>
       </div>
     </div>
   );
