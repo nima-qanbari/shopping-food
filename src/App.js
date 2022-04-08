@@ -1,4 +1,6 @@
 import React from 'react'
+
+//styles
 import './App.css';
 
 //pages
@@ -6,7 +8,7 @@ import Home from './pages/Home/Home';
 
 const App = () => {
   return (
-    <div>
+    <div className='container'>
       <Home />
     </div>
   )
