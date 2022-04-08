@@ -9,6 +9,7 @@ import { menuItemsData } from '../../components/common/Menu/data'
 import Logo from '../../components/common/Logo/Logo'
 import Menu from '../../components/common/Menu/Menu'
 import Footer from '../../components/common/Footer/Footer'
+import EmptyCart from '../../components/Cart/EmptyCart/EmptyCart'
 
 const Cart = () => {
   return (
@@ -16,6 +17,7 @@ const Cart = () => {
         <div className="cart-header">
             <Logo />
         </div>
+        <EmptyCart />
         <div className="orders">
            <h1 className="orders-heading">Your Orders</h1> 
            <div className="orders-menu">
