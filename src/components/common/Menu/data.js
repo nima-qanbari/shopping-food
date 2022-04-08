@@ -3,7 +3,7 @@ export const menuItemsData = [
     id: 1,
     name: 'Mediterranean  Salad',
     info: 'spicey with garlic and then deep fried to crispy perfection',
-    price: 24,
+    price: 15,
     img:require('../../../images/bigBurger.png') ,
   },
   {

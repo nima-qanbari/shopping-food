@@ -1,7 +1,6 @@
 import React from 'react'
 
-//data
-import {menuItemsData} from "./data"
+
 
 //components
 import MenuItem from './MenuItem/MenuItem'
@@ -9,10 +8,10 @@ import MenuItem from './MenuItem/MenuItem'
 //styles
 import "./styles.css"
 
-const Menu = () => {
+const Menu = ({list}) => {
   return (
     <main>
-      {menuItemsData.map(item => <MenuItem key={item.key} item={item}/>)}
+      {list.map(item => <MenuItem key={item.key} item={item}/>)}
     </main>
   )
 }

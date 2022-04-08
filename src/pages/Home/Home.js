@@ -1,5 +1,8 @@
 import React from 'react'
 
+//data
+import { menuItemsData } from '../../components/common/Menu/data'
+
 //components
 import Footer from '../../components/common/Footer/Footer'
 import Menu from '../../components/common/Menu/Menu'
@@ -12,7 +15,7 @@ const Home = () => {
         {/* Banner */}
         <Banner />
         {/* Menu */}
-        <Menu />
+        <Menu list={menuItemsData}/>
         {/* Footer */}
         <Footer />
         {/* Cart Count Button */}
