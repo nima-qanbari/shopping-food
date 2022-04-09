@@ -12,15 +12,18 @@ import bannerImage from "./banner.png";
 //components
 import Logo from "../../common/Logo/Logo";
 
-const Banner = () => {
+const Banner = ({handleScrollMenu}) => {
   return (
     <header>
       <div className="header-content">
         <Logo />
+        <div className="img-container">
+          <img src={bannerImage} alt="banner" className="header-img-top" />
+        </div>
         <div className="content-main">
           <h1>Delicious food for your cravings</h1>
           <p>We made fresh and healthy meals with different recipes</p>
-          <button>
+          <button onClick={handleScrollMenu}>
             View Menu
             <AiOutlineArrowRight />
           </button>

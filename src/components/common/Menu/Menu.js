@@ -1,6 +1,4 @@
-import React from 'react'
-
-
+import React, {forwardRef} from 'react'
 
 //components
 import MenuItem from './MenuItem/MenuItem'
@@ -8,12 +6,12 @@ import MenuItem from './MenuItem/MenuItem'
 //styles
 import "./styles.css"
 
-const Menu = ({list}) => {
+const Menu = forwardRef(({list}, ref) => {
   return (
-    <main>
+    <main ref={ref}>
       {list.map(item => <MenuItem key={item.id} item={item}/>)}
     </main>
   )
-}
+})
 
 export default Menu
