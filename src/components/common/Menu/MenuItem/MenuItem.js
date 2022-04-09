@@ -8,6 +8,8 @@ import ButtonAddRemoveItem from "../../ButtonAddRemoveItem/ButtonAddRemoveItem";
 
 const MenuItem = ({item}) => {
   const { name, info, price, img } = item;
+
+
   return (
     <div className="item">
       <img src={img} alt="item" />
@@ -19,7 +21,7 @@ const MenuItem = ({item}) => {
       </div>
       <div className="item-footer-desc">
         <span className="footer-desc-price">$ {price}</span>
-        <ButtonAddRemoveItem quantity={2}/>
+        <ButtonAddRemoveItem item={item}/>
       </div>
     </div>
   );

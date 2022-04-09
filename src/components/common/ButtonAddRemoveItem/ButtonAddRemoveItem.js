@@ -1,33 +1,64 @@
-import React from 'react'
+import React from "react";
 
 //styles
-import "./styles.css"
+import "./styles.css";
 
 //react-icons
-import {AiOutlineMinus, AiOutlinePlus} from "react-icons/ai"
+import { AiOutlineMinus, AiOutlinePlus } from "react-icons/ai";
 
-const ButtonAddRemoveItem = ({quantity, handleAddItem, HandleRemoveItem}) => {
+//helper
+import { isInCart, quantityCount } from "../../../helper/helper";
+//react-redux
+import { useSelector, useDispatch } from "react-redux";
+import {
+  increase,
+  addItem,
+  decrease,
+  removeItem,
+} from "../../../redux/Cart/cartAction";
 
-  const removeItemHandler = () => {
-
-  }
-
-  const addItemHandler = () => {
-    
-  }
+const ButtonAddRemoveItem = ({ item }) => {
+  const state = useSelector((state) => state);
+  console.log(state);
+  const dispatch = useDispatch();
   return (
-    <div className='btnAddRemove'>
-        {quantity !== 0 ? <div className='btnAddRemove-positive'>
-           <AiOutlineMinus onClick={removeItemHandler} />
-           <span>{quantity}</span>
-          <AiOutlinePlus onClick={addItemHandler}/>
-        </div> : 
-        <div className='btnAddRemove-negative' onClick={addItemHandler}>
-          <span>Add</span>
-          <AiOutlinePlus />
-        </div> }
-    </div>
-  )
-}
+    <div className="btnAddRemove">
+      {isInCart(state, item.id) ? (
+        <button
+          className="addRemove"
+          onClick={() => dispatch(increase(item))}
+        >
+          +
+        </button>
+      ) : (
+        <button
+          className="add"
+          onClick={() => dispatch(addItem(item))}
+        >
+          افزودن
+        </button>
+      )}
 
-export default ButtonAddRemoveItem
+      {quantityCount(state, item.id) > 0 && <span className="counter">{quantityCount(state, item.id)}</span>}
+
+      {quantityCount(state, item.id) > 1 && (
+        <button
+          className="addRemove"
+          onClick={() => dispatch(decrease(item))}
+        >
+          -
+        </button>
+      )}
+      {quantityCount(state, item.id) === 1 && (
+        <button
+          className="addRemove"
+          onClick={() => dispatch(removeItem(item))}
+        >
+          -
+        </button>
+      )}
+    </div>
+  );
+};
+
+export default ButtonAddRemoveItem;

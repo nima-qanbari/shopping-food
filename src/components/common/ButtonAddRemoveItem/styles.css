@@ -2,20 +2,35 @@
     display: flex;
     align-items: center;
     width: 55px;
-    font-size: 20px;
+    font-size: larger;
     justify-content: center;
     border-radius: 100px;
-    padding: .3rem;
+    padding: .1rem;
     cursor: pointer;
     font-size: .6rem;
     background-color: #000;
     color: #fff;
 }
 
-.btnAddRemove-positive, .btnAddRemove-negative {
-    display: flex;
-    align-items: center;
-    width: 100%;
-    justify-content: space-between;
-    font-weight: bold;
+.btnAddRemove button {
+    font-weight: 500;  
+    background-color: transparent;
+    color: white;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    /* font-size: 16px; */
+}
+
+.add {
+    font-size: 14px;
+}
+
+.addRemove {
+    font-size: 14px!important;
+}
+
+.counter {
+    margin: 0 5px;
+    font-size: 14px;
 }

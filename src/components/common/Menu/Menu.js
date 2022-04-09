@@ -11,7 +11,7 @@ import "./styles.css"
 const Menu = ({list}) => {
   return (
     <main>
-      {list.map(item => <MenuItem key={item.key} item={item}/>)}
+      {list.map(item => <MenuItem key={item.id} item={item}/>)}
     </main>
   )
 }

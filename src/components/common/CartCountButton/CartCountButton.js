@@ -8,11 +8,13 @@ import {useNavigate} from "react-router-dom"
 
 //react-icons
 import {MdShoppingCart} from "react-icons/md"
-const CartCountButton = ({cartCount}) => {
+import { useSelector } from 'react-redux'
+const CartCountButton = () => {
+  const counter = useSelector(state => state.itemsCounter)
   const navigate = useNavigate()
   return (
     <div className='btnCartCount' onClick={() => navigate("/cart")}>
-      <div className="count">{cartCount >= 100 ? "99+" : cartCount}</div>
+      <div className="count">{counter >= 100 ? "99+" : counter}</div>
       <MdShoppingCart />
     </div>
   )

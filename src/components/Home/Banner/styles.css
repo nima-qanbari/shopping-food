@@ -4,7 +4,9 @@ header {
     padding-top: .5rem;
     height: 100vh;
 }
-
+.header-img-top {
+    display: none;
+}
 .header-img {
     width: 100%;
     align-self: center;
@@ -53,7 +55,7 @@ header {
 
 @media (max-width: 768px) {
 header{
-    height: 65vh;
+    height: 65vh; 
 }
 
     .content-main p {
@@ -66,4 +68,23 @@ header{
         padding: .5rem 1rem;
         margin-top: 1.5rem;
     }
+}
+
+@media (max-width: 400px) {
+   header {
+       margin-bottom: 5rem ;
+       grid-template-columns: 1fr;
+       
+   }
+   .img-container {
+       margin:2rem auto;
+   }
+   .header-img-top{
+       display: block;
+       object-fit: contain;
+       width: 200px;
+   }
+    .header-img {
+        display: none;
+    } 
 }
