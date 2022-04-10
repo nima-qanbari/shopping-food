@@ -7,7 +7,7 @@ const initialState = {
 
 const sumItems = (items) => {
   let itemsCounter = items.reduce((acc, current) => acc + current.quantity , 0)
-  let total = items.reduce((acc, current) => acc + current.price * current.quantity, 0).toFixed(2)
+  let total = items.reduce((acc, current) => acc + current.price * current.quantity, 0).toLocaleString()
 
   return {itemsCounter, total}
 }
@@ -35,8 +35,7 @@ const reducer = (state = initialState, action) => {
       return {
         ...state,
         selectedItems: [...newSelectedItem],
-        ...sumItems(newSelectedItem)
-
+        ...sumItems(newSelectedItem),
       };
 
     case "INCREASE":

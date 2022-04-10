@@ -21,10 +21,10 @@ const Banner = ({handleScrollMenu}) => {
           <img src={bannerImage} alt="banner" className="header-img-top" />
         </div>
         <div className="content-main">
-          <h1>Delicious food for your cravings</h1>
-          <p>We made fresh and healthy meals with different recipes</p>
-          <button onClick={handleScrollMenu}>
-            View Menu
+          <h1>غذاهای خوشمزه برای شما</h1>
+          <p>روح خود را با غذا های خوشمزه ما راضی کنید.</p>
+          <button onClick={handleScrollMenu} dir="ltr">
+            Menu
             <AiOutlineArrowRight />
           </button>
         </div>

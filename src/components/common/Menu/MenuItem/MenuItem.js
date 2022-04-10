@@ -20,7 +20,7 @@ const MenuItem = ({item}) => {
         </p>
       </div>
       <div className="item-footer-desc">
-        <span className="footer-desc-price">$ {price}</span>
+        <span className="footer-desc-price">{price.toLocaleString()}</span>
         <ButtonAddRemoveItem item={item}/>
       </div>
     </div>

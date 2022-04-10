@@ -2,10 +2,8 @@
     display: flex;
     align-items: center;
     width: 55px;
-    font-size: larger;
     justify-content: center;
     border-radius: 100px;
-    padding: .1rem;
     cursor: pointer;
     font-size: .6rem;
     background-color: #000;
@@ -19,7 +17,7 @@
     border: none;
     outline: none;
     cursor: pointer;
-    /* font-size: 16px; */
+    font-size: 13px;
 }
 
 .add {

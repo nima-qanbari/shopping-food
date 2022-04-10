@@ -40,15 +40,21 @@ header {
     outline: none;
     border: none;
     font-size: 1rem ;
-    border-bottom-left-radius: 25px;
     border-top-left-radius: 25px;
+    border-bottom-right-radius: 25px;
     border-top-right-radius: 25px;
     cursor: pointer;
     margin-top: 2.5rem;
+    transition: all .2s ease;
+}
+
+.content-main button:hover {
+    background-color: rgb(233, 59, 59);
 }
 
 .content-main p {
     font-weight: 500;
+    font-size: 17px;
 }
 
 

@@ -25,7 +25,14 @@ const increase = (product) => {
         payload: product,
     }
  }
+
+ const checkout = () => {
+     return {
+         type : "CHECKOUT" ,
+
+     }
+ }
  
 
- export {addItem, removeItem, increase, decrease}
+ export {addItem, removeItem, increase, decrease , checkout}
  

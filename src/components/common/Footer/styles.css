@@ -11,11 +11,31 @@ footer p {
     font-weight: 500;
     max-width: 600px;
     margin-right: .5rem;
+    text-align: justify;
 }
 
 
-@media (max-width: 576px) {
+@media (max-width: 768px) {
     footer p {
          font-size: .8rem;
+         margin: 0 20px;
+    }
+}
+@media (max-width: 576px) {
+    footer p {
+         font-size: .7rem;
+         margin: 0 20px;
+    }
+}
+
+@media (max-width: 400px) {
+
+    footer{
+        flex-direction: column;
+    }
+
+    footer p {
+         font-size: .7rem;
+         margin-bottom: 20px;
     }
 }

@@ -10,8 +10,7 @@ const Footer = () => {
   return (
     <footer>
       <p>
-        We're a team of Professional cooks who are exited about their food,
-        amazing skills and experience and expertiness in cooking.
+      ما تیمی از آشپزهای حرفه ای هستیم که در مورد غذا، مهارت های شگفت انگیز و تجربه و تخصص خود را در آشپزی در اختیار شما قرار میدهیم .
       </p>
       <Logo />
     </footer>

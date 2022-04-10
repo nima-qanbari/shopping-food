@@ -6,6 +6,7 @@
     text-align: center;
     display: flex;
     flex-direction: column;
+    box-shadow: 0 0 10px rgb(196, 189, 189);
 }
 
 
@@ -29,6 +30,7 @@
 }
 
 .head-desc-name {
+    text-align: right;
     font-weight: 600;
     font-size: .9rem;
     text-transform: capitalize;
@@ -36,8 +38,9 @@
 }
 
 .head-desc-info {
-    font-size: .8rem;
-    color: #a0a0a0a0;
+    text-align: justify;
+    font-size: .87rem;
+    color: #494949a0;
 }
 
 .item-footer-desc {
@@ -47,7 +50,8 @@
 }
 
 .footer-desc-price {
-    font-weight: 700;
+    font-weight: 500;
+    font-size: 14px;
 }
 
 @media (max-width: 400px) {
