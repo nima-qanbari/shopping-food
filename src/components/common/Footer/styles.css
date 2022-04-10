@@ -5,6 +5,7 @@ footer {
     padding: 2rem 0;
     justify-content: space-between;
     align-items: center;
+    position: relative;
 }
 
 footer p {
@@ -12,6 +13,16 @@ footer p {
     max-width: 600px;
     margin-right: .5rem;
     text-align: justify;
+}
+
+footer h5 {
+    position: absolute;
+    bottom: 0;
+    left: 41%;
+}
+
+footer h5 span {
+    color: red;
 }
 
 
