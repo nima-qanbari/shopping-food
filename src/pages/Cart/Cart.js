@@ -2,6 +2,11 @@ import React from "react";
 //styles
 import "./styles.css";
 
+//toastify
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import { notify } from "../../components/Toast/Toast";
+
 //components
 import Logo from "../../components/common/Logo/Logo";
 import Footer from "../../components/common/Footer/Footer";
@@ -13,6 +18,10 @@ import { checkout } from "../../redux/Cart/cartAction";
 const Cart = () => {
   const state = useSelector((state) => state);
   const dispatch = useDispatch();
+  const submitHandler = () => {
+    dispatch(checkout());
+    notify("پرداخت شما با موفقیت انجام شد");
+  };
   return (
     <>
       <div className="cart-header">
@@ -31,15 +40,13 @@ const Cart = () => {
 
         {state.itemsCounter > 0 && (
           <div className="checkout-container">
-            <button
-              className="checkout-btn"
-              onClick={() => dispatch(checkout())}
-            >
+            <button className="checkout-btn" onClick={submitHandler}>
               پرداخت
             </button>
           </div>
         )}
       </div>
+      <ToastContainer />
       <Footer />
     </>
   );
